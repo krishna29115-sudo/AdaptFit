@@ -2,7 +2,7 @@ name: Build APK
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, master ]
   workflow_dispatch:
 
 jobs:
@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Unzip project
-        run: unzip -q AdaptFit-stage1.zip
+        run: unzip -q -o AdaptFit-stage2.zip
 
       - uses: actions/setup-java@v4
         with:
